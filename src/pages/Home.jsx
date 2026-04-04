@@ -16,6 +16,7 @@ import {
   FaPerson,
   FaRightLeft,
 } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 export default function Home() {
   useEffect(() => {
     AOS.init({
@@ -182,12 +183,11 @@ export default function Home() {
           Your one-stop solution for <span className="text-6xl">Events</span>{" "}
           <br /> From <span className="text-6xl">Planning to Execution</span>
         </p>
-        <button
-          onClick={() => setOpen(true)}
-          className="bg-pink-500 cursor-pointer hover:bg-pink-600 text-white font-bold py-3 px-4 rounded mt-5 transition-colors duration-300"
-        >
-          Get Started
-        </button>
+        <Link to="/contact">
+          <p className="bg-pink-500 cursor-pointer hover:bg-pink-600 text-white font-bold py-3 px-4 rounded mt-5 transition-colors duration-300">
+            Get Started
+          </p>
+        </Link>
       </div>
       <Footer />
     </div>

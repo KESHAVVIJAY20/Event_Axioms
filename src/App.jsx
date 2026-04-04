@@ -6,6 +6,7 @@ import About from "./pages/About";
 import Events from "./pages/Events";
 import { useState } from "react";
 import SplashScreen from "./conponents/WelcomeModal";
+import ScrollToTop from "../../../Thermo_Green/thermo_green_energy/src/components/ScrollToTop";
 function App() {
   const [showSplash, setShowSplash] = useState(true);
 
@@ -15,6 +16,7 @@ function App() {
         <SplashScreen onFinish={() => setShowSplash(false)} />
       ) : (
         <HashRouter>
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/contact" element={<Contact />} />

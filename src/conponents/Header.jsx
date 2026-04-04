@@ -80,9 +80,10 @@ export default function Header() {
           <NavLink to="/contact" onClick={() => setMenuOpen(false)}>
             Contact us
           </NavLink>
-          <button className="bg-purple-600 p-2 rounded hover:shadow-sm hover:shadow-purple-900 text-sm text-white">
+          <button onClick={() => setOpen(true)} className="linear-gradient bg-linear-to-r from-teal-600 to-teal-600 p-2 rounded hover:shadow-sm hover:shadow-purple-900 text-sm text-white">
             Schedule Now
           </button>
+          <EnquiryModal isOpen={open} onClose={() => setOpen(false)} />
         </nav>
       </div>
     </header>

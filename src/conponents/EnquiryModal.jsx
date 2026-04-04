@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import Logo from "../assets/Ea.png";
 export default function EnquiryModal({ isOpen, onClose }) {
   const [form, setForm] = useState({
     name: "",
@@ -21,7 +21,7 @@ export default function EnquiryModal({ isOpen, onClose }) {
 
     try {
       const res = await fetch(
-        `https://api.postalpincode.in/pincode/${pincode}`
+        `https://api.postalpincode.in/pincode/${pincode}`,
       );
       const data = await res.json();
 
@@ -43,22 +43,20 @@ export default function EnquiryModal({ isOpen, onClose }) {
 
   return (
     <div className="fixed inset-0 bg-black/50 flex justify-center items-center z-50">
-      <div className="bg-white p-6 rounded-xl w-[90%] md:w-125 relative">
-        
+      <div className="bg-white p-6 rounded-xl w-[90%] md:w-100 md:h-auto  relative">
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-2 right-3 text-xl cursor-pointer"
+          className="absolute top-7.5 right-7 text-xl cursor-pointer"
         >
           ✕
         </button>
 
-        <h2 className="text-2xl font-semibold mb-4 text-center">
-          Enquiry Form
+        <h2 className="text-xl font-semibold mb-4 text-center">
+          Let’s Plan Your Perfect Event
         </h2>
 
         <div className="flex flex-col gap-4">
-
           <input
             type="text"
             name="name"
@@ -116,6 +114,9 @@ export default function EnquiryModal({ isOpen, onClose }) {
           <button className="bg-black text-white py-3 rounded-lg hover:opacity-90">
             Submit
           </button>
+          <div className="flex justify-center items-center">
+            <img src={Logo} alt="Event Axiom Logo" width={200} height={200} />
+          </div>
         </div>
       </div>
     </div>
