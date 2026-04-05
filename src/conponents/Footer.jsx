@@ -17,7 +17,7 @@ import {
 import { Link } from "react-router-dom";
 export default function Footer() {
   return (
-    <div className="bg-pink-200 text-center  pt-10 pb-2 space-y-5 justify-center items-center flex flex-col">
+    <div className="bg-pink-50  text-center  pt-10 pb-2 space-y-5 justify-center items-center flex flex-col text-gray-700">
       <div className="md:flex flex-1 justify-between w-full px-10 space-y-10">
         <div className="flex justify-center items-center">
           <img src={LOGO} width={200} height={100} alt="logo" />

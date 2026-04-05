@@ -57,11 +57,13 @@ export default function VideoCarousel() {
       <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
         <div className="text-center space-y-5 justify-center items-center flex flex-col">
           <h1 className="text-white md:text-5xl text-4xl w-full font-bold ">
-            Crafting Unforgettable <br /><span className="md:text-8xl text-6xl">Experiences !</span>
+            Crafting Unforgettable <br />
+            <span className="md:text-8xl text-6xl">Experiences !</span>
           </h1>
           <p className="text-white text-sm w-full">
             Luxury events, weddings & celebrations tailored to perfection.
           </p>
+          <hr className="text-white h-2 w-full" />
           <div className="flex gap-10 justify-center mt-10">
             <div className="text-center">
               <Counter target={500} />

@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import Header from "../conponents/Header";
 import Footer from "../conponents/Footer";
-import WelcomeModal from "../conponents/WelcomeModal";
 import owner from "../assets/AnujVj1.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
