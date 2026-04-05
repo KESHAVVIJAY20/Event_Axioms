@@ -1,39 +1,47 @@
-import Bg1 from "../assets/background1.jpg";
-import Bg2 from "../assets/background2.jpg";
-import vid1 from "../assets/video1.mp4";
-import vid2 from "../assets/video2.mp4";
-import BG3 from "../assets/bg01.jpg";
+import v1 from "../assets/video1.mp4";
+import v2 from "../assets/video2.mp4";
+import v3 from "../assets/video3.mp4";
+import v4 from "../assets/video4.mp4";
+import v5 from "../assets/video5.mp4";
+import v6 from "../assets/video6.mp4";
+
 export default function EventMarquee() {
   const events = [
     {
       id: 1,
       title: "Wedding",
-      img: "https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8d2VkZGluZ3xlbnwwfHwwfHx8MA%3D%3D",
+      media: v1,
+      isVideo: true,
     },
     {
       id: 2,
       title: "Concert",
-      img: "https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHdlZGRpbmd8ZW58MHx8MHx8fDA%3D",
+      media: v2,
+      isVideo: true,
     },
     {
       id: 3,
       title: "Corporate",
-      img: "https://images.unsplash.com/photo-1606216794079-73f85bbd57d5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHdlZGRpbmd8ZW58MHx8MHx8fDA%3D",
+      media: v3,
+      isVideo: true,
     },
     {
       id: 4,
       title: "Birthday",
-      img: "https://images.unsplash.com/photo-1546032996-6dfacbacbf3f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHdlZGRpbmd8ZW58MHx8MHx8fDA%3D",
+      media: v4,
+      isVideo: true,
     },
     {
       id: 5,
       title: "Festival",
-      img: "https://media.istockphoto.com/id/2210689996/photo/a-man-and-woman-are-holding-a-bouquet-of-flowers.webp?a=1&b=1&s=612x612&w=0&k=20&c=NqQXNDrd3-2JSmTKBU1DDgny70xr2GIW60ksNMrSafE=",
+      media: v5,
+      isVideo: true,
     },
     {
       id: 6,
       title: "Festival",
-      img: "https://media.istockphoto.com/id/2196118181/photo/bride-and-groom-husband-and-wife-close-up-of-wedding-rings.webp?a=1&b=1&s=612x612&w=0&k=20&c=FNM0FzXAV6jpfrELefPU7AuWXiCtNXjCEoplIknCbXc=",
+      media: v6,
+      isVideo: true,
     },
   ];
 
@@ -55,11 +63,26 @@ export default function EventMarquee() {
               onMouseLeave={(e) => e.target.pause()}
               className="h-40 w-full object-cover"
             /> */}
-            <img
+            {/* <img
               src={event.img}
               alt={event.title}
               className="h-70 w-70 object-cover hover:scale-105 transition-transform duration-300"
-            />
+            /> */}
+            {event.isVideo ? (
+                <video
+                  src={event.media}
+                  autoPlay
+                  loop
+                  muted
+                  className="w-full h-72 object-cover group-hover:scale-110 transition duration-500"
+                />
+              ) : (
+                <img
+                  src={event.media}
+                  alt={event.title}
+                  className="w-full h-72 object-cover group-hover:scale-110 transition duration-500"
+                />
+              )}
             <div className="p-3">
               <h3 className="font-semibold">{event.title}</h3>
             </div>

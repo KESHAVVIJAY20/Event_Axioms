@@ -27,7 +27,7 @@ export default function Footer() {
             Quick Information
           </h3>
           <div className="flex flex-col gap-3 justify-center items-start text-start">
-            <p className="hover:scale-105 text-xl flex flex-col gap-2">
+            <p className=" text-xl flex flex-col gap-2">
               <span> Year of Establishment : 2007</span>
               <span>opening hours : 10:00 AM - 7:00 PM (Sun-Mon)</span>
             </p>
@@ -52,21 +52,21 @@ export default function Footer() {
         </div>
         <div className="flex flex-col gap-2  text-start justify-start items-start">
           <h3 className="text-2xl font-semibold text-center">Contact Us</h3>
-          <div className="flex justify-start items-center gap-2">
+          <div className="flex justify-start items-center gap-4">
             <FaLocationArrow />
             <p className="max-w-50 text-xl">
               KTVS Garden, Aerodrome, kota-324009, Rajasthan, India
             </p>
           </div>
-          <div className="flex justify-start items-center gap-2">
+          <div className="flex justify-start items-center gap-4">
             <FaPhoneAlt />
             <p className="text-xl">+91 12345 67890</p>
           </div>
-          <div className="flex justify-start items-center gap-2">
+          <div className="flex justify-start items-center gap-4">
             <FaEnvelope />
             <p className="text-xl">info@eventaxiom.com</p>
           </div>
-          <div className="flex justify-start items-center gap-2">
+          <div className="flex justify-start items-center gap-4">
             <FaCashRegister />
             <p className="text-xl">GSTIN : 08ACKPV4013A2ZU</p>
           </div>
