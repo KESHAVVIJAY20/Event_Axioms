@@ -54,20 +54,6 @@ export default function EventMarquee() {
             key={index}
             className="bg-white rounded-2xl shadow-lg cursor-pointer"
           >
-            {/* <video
-              src={event.vid}
-              muted
-              loop
-              playsInline
-              onMouseEnter={(e) => e.target.play()}
-              onMouseLeave={(e) => e.target.pause()}
-              className="h-40 w-full object-cover"
-            /> */}
-            {/* <img
-              src={event.img}
-              alt={event.title}
-              className="h-70 w-70 object-cover hover:scale-105 transition-transform duration-300"
-            /> */}
             {event.isVideo ? (
                 <video
                   src={event.media}

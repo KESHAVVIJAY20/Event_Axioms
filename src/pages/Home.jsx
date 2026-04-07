@@ -17,6 +17,8 @@ import {
   FaRightLeft,
 } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import WhoWeAre from "../conponents/WhoWeAre";
+import WhyChooseUs from "../conponents/WhyChooseUs";
 export default function Home() {
   useEffect(() => {
     AOS.init({
@@ -34,37 +36,80 @@ export default function Home() {
       <EnquiryModal isOpen={open} onClose={() => setOpen(false)} />
       <Header />
       <VideoCarousel />
-      <img data-aos="fade-in" src={bgdesign} className="" alt="" />
-      <div className="bg-contain bg-no-repeat flex items-center justify-center flex-col gap-10 pb-10 mask-[linear-gradient(to_top,transparent_0%,black_10%)]">
+      <WhoWeAre />
+      {/* <img data-aos="fade-in" src={bgdesign} className="" alt="" /> */}
+      <div className="flex items-center justify-center flex-col gap-10 pb-10 mask-[linear-gradient(to_top,transparent_0%,black_10%)]">
         <div className="bg-purple-50 bg-opacity-50 p-10 rounded-2xl shadow-lg w-full mask-[linear-gradient(to_bottom,transparent_0%,black_10%)] ">
           <h1 data-aos="fade-up" className="text-center text-5xl mb-10 mt-10">
-            Our Services
+            Our Core Services
           </h1>
-          <div className="md:flex justify-center items-center gap-5 flex-wrap md:space-y-0 space-y-5 ">
+          <div className="md:flex justify-center items-center gap-5 flex-wrap md:space-y-0 space-y-5">
+            {/* <div
+              data-aos="zoom-in"
+              className="cursor-pointer flex flex-col justify-center items-center text-center shadow-sm bg-white p-10 rounded-2xl border-2 border-pink-200 hover:border-pink-600 transition-transform duration-400 hover:-translate-y-2 scroll-smooth w-full md:w-80 h-50 group relative ..."
+            >
+              <p className="text-3xl">Weddings & Social Celebrations</p>
+
+              <div className="absolute top-53 left-0 w-full h-full bg-white text-white flex items-center justify-center rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 drop-shadow-xl drop-shadow-pink-400">
+                <p className="px-4 text-sm text-pink-400">
+                  Your big day deserves nothing short of perfection. Recognized
+                  as the top wedding planners in Kota Rajasthan, we curate
+                  bespoke wedding experiences that reflect your unique story.
+                  Whether you are planning an intimate hometown ceremony or a
+                  grand royal affair, our expertise as luxury destination
+                  wedding planners Rajasthan guarantees a spectacular,
+                  stress-free celebration.
+                </p>
+              </div>
+            </div> */}
             <div
               data-aos="zoom-in"
-              className="cursor-pointer flex flex-col justify-center items-center text-center shadow-sm bg-white p-10 rounded-2xl border-2 border-pink-200 hover:border-pink-600 transition-transform duration-400 hover:-translate-y-2 scroll-smooth w-full md:w-80 h-50"
+              className="group relative cursor-pointer flex flex-col justify-center items-center text-center shadow-sm bg-white p-10 rounded-2xl border-2 border-pink-200 hover:border-pink-600 transition-transform duration-300 hover:-translate-y-2 w-full md:w-80"
             >
-              <p className="text-3xl">Weddings</p>
-              <span className="">
-                Elegant and timeless wedding experiences.
-              </span>
+              <p className="text-3xl">Weddings & Social Celebrations</p>
+
+              {/* Hover Box */}
+              <div className="absolute top-full mt-3 left-1/2 -translate-x-1/2 w-80 bg-white text-pink-500 p-5 rounded-xl shadow-2xl opacity-0 group-hover:opacity-100 transition-all duration-300 z-50">
+                <p className="text-sm">
+                  Your big day deserves nothing short of perfection...
+                </p>
+              </div>
             </div>
             <div
               data-aos="zoom-in"
-              className="cursor-pointer flex flex-col justify-center items-center text-center shadow-sm bg-white p-10 rounded-2xl border-2 border-pink-200 hover:border-pink-600 transition-transform duration-300 hover:-translate-y-2 w-full md:w-80 h-50"
+              className="cursor-pointer flex flex-col justify-center items-center text-center shadow-sm bg-white p-10 rounded-2xl border-2 border-pink-200 hover:border-pink-600 transition-transform duration-400 hover:-translate-y-2 scroll-smooth w-full md:w-80 h-50 group relative ..."
             >
-              <p className="text-3xl">Corporate Events</p>
-              <span className="">
-                Professional events with flawless execution.
-              </span>
+              <p className="text-3xl">Weddings & Social Celebrations</p>
+
+              <div className="absolute top-53 left-0 w-full h-full bg-white text-white flex items-center justify-center rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 drop-shadow-xl drop-shadow-pink-400">
+                <p className="px-4 text-sm text-pink-400">
+                  Your big day deserves nothing short of perfection. Recognized
+                  as the top wedding planners in Kota Rajasthan, we curate
+                  bespoke wedding experiences that reflect your unique story.
+                  Whether you are planning an intimate hometown ceremony or a
+                  grand royal affair, our expertise as luxury destination
+                  wedding planners Rajasthan guarantees a spectacular,
+                  stress-free celebration.
+                </p>
+              </div>
             </div>
             <div
               data-aos="zoom-in"
-              className="cursor-pointer flex flex-col justify-center items-center text-center shadow-xs bg-white p-10 rounded-2xl border-2 border-pink-200 hover:border-pink-600 transition-transform duration-300 hover:-translate-y-2 w-full md:w-80 h-50"
+              className="cursor-pointer flex flex-col justify-center items-center text-center shadow-sm bg-white p-10 rounded-2xl border-2 border-pink-200 hover:border-pink-600 transition-transform duration-400 hover:-translate-y-2 scroll-smooth w-full md:w-80 h-50 group relative ..."
             >
-              <p className="text-3xl">Private Parties</p>
-              <span className="">Celebrate your moments in style.</span>
+              <p className="text-3xl">Weddings & Social Celebrations</p>
+
+              <div className="absolute top-53 left-0 w-full h-full bg-white text-white flex items-center justify-center rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 drop-shadow-xl drop-shadow-pink-400">
+                <p className="px-4 text-sm text-pink-400">
+                  Your big day deserves nothing short of perfection. Recognized
+                  as the top wedding planners in Kota Rajasthan, we curate
+                  bespoke wedding experiences that reflect your unique story.
+                  Whether you are planning an intimate hometown ceremony or a
+                  grand royal affair, our expertise as luxury destination
+                  wedding planners Rajasthan guarantees a spectacular,
+                  stress-free celebration.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -76,10 +121,11 @@ export default function Home() {
         className=" bg-contain bg-no-repeat flex items-center justify-center flex-col gap-10 pb-20 mask-[linear-gradient(to_bottom,transparent_0%,black_20%)]"
       >
         <section className="overflow-hidden w-full bg-pink-50 py-20 mask-[linear-gradient(to_bottom,transparent_0%,black_10%)]">
-          <h1 className="text-center text-5xl mb-20">Our Work</h1>
+          <h1 className="text-center text-5xl mb-20">Moments Gallery</h1>
           <WorkCarousel />
         </section>
       </div>
+      <WhyChooseUs />
       <ClientReview />
 
       <div className="flex-col flex justify-center items-center my-20">

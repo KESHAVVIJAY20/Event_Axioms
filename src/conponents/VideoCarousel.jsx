@@ -56,32 +56,46 @@ export default function VideoCarousel() {
       </div>
       <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
         <div className="text-center space-y-5 justify-center items-center flex flex-col">
-          <h1 className="text-white md:text-5xl text-4xl w-full font-bold ">
-            Crafting Unforgettable <br />
-            <span className="md:text-8xl text-6xl">Experiences !</span>
+          <h1 className="text-white md:text-7xl text-6xl w-full font-bold space-y-0 md:gap-0 gap-3 flex flex-col">
+            <p>Welcome to Event Axiom</p>
+            <span className="md:text-4xl text-2xl">
+              Transforming Visions into Unforgetable Experiences!
+            </span>
           </h1>
-          <p className="text-white text-sm w-full">
-            Luxury events, weddings & celebrations tailored to perfection.
-          </p>
-          <hr className="text-white h-2 w-full" />
-          <div className="flex gap-10 justify-center mt-10">
+          <div className="flex flex-col items-center justify-center">
+            <hr className="text-white h-2 md:max-w-100 w-full" />
+            <p className="text-white text-md w-full">
+              ​Planning an event shouldn't be stressful - it should be a
+              celebration.
+            </p>
+          </div>
+          {/* <div className="flex gap-10 justify-center mt-10">
             <div className="text-center">
-              <Counter target={500} />
+              <div className="flex justify-center items-center">
+                <Counter target={500} />
+                <span className="text-white text-2xl font-bold">+</span>
+              </div>
               <p className="text-white">Happy Clients</p>
             </div>
 
             <div className="text-center">
-              <Counter target={1200} />
+              <div className="flex justify-center items-center">
+                <Counter target={1200} />
+                <span className="text-white text-2xl font-bold">+</span>
+              </div>
               <p className="text-white">Projects</p>
             </div>
 
             <div className="text-center">
-              <Counter target={50} />
+              <div className="flex justify-center items-center">
+                <Counter target={50} />
+                <span className="text-white text-2xl font-bold">+</span>
+              </div>
               <p className="text-white">Events</p>
             </div>
-          </div>
-          <Link to="/events">
-            <p className="bg-amber-300 p-2 rounded font-semibold w-50">
+          </div> */}
+          <Link to="/gallery" className="flex justify-center items-center mt-10">
+            <p className="bg-amber-300 p-2 rounded font-semibold w-50 mt-10">
               Explore Events
             </p>
           </Link>

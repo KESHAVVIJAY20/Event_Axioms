@@ -1,5 +1,5 @@
 import React from "react";
-import LOGO from "../assets/titleLogo.png";
+import LOGO from "../assets/axiomLogo.png";
 import {
   FaCashRegister,
   FaEnvelope,
@@ -12,6 +12,7 @@ import {
   FaPhoneAlt,
   FaRegistered,
   FaTwitter,
+  FaWhatsapp,
   FaYoutube,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -28,8 +29,8 @@ export default function Footer() {
           </h3>
           <div className="flex flex-col gap-3 justify-center items-start text-start">
             <p className=" text-xl flex flex-col gap-2">
-              <span> Year of Establishment : 2007</span>
-              <span>opening hours : 10:00 AM - 7:00 PM (Sun-Mon)</span>
+              <span> Year of Establishment : 2000</span>
+              <span>opening hours : 10:00 AM - 5:00 PM (Sun-Mon)</span>
             </p>
           </div>
         </div>
@@ -39,8 +40,8 @@ export default function Footer() {
             <Link className="hover:scale-105 text-xl" to="/">
               Home
             </Link>
-            <Link className="hover:scale-105 text-xl" to="/events">
-              Events
+            <Link className="hover:scale-105 text-xl" to="/gallery">
+              Gallery
             </Link>
             <Link className="hover:scale-105 text-xl" to="/about">
               About
@@ -55,16 +56,16 @@ export default function Footer() {
           <div className="flex justify-start items-center gap-4">
             <FaLocationArrow />
             <p className="max-w-50 text-xl">
-              KTVS Garden, Aerodrome, kota-324009, Rajasthan, India
+              4-GH-13 Vigyan Nagar, kota-324005, Rajasthan, India
             </p>
           </div>
           <div className="flex justify-start items-center gap-4">
             <FaPhoneAlt />
-            <p className="text-xl">+91 12345 67890</p>
+            <p className="text-xl">+91 9214036552</p>
           </div>
           <div className="flex justify-start items-center gap-4">
             <FaEnvelope />
-            <p className="text-xl">info@eventaxiom.com</p>
+            <p className="text-xl">eventaxiom7@gmail.com</p>
           </div>
           <div className="flex justify-start items-center gap-4">
             <FaCashRegister />
@@ -82,21 +83,21 @@ export default function Footer() {
           <p>
             <FaFacebook />
           </p>
+          <Link
+            to="https://wa.me/919214036552?text=Hello%20Event%20Axiom!%20I%20would%20like%20to%20inquire%20about%20your%20services."
+            target="_blank"
+          >
+            <FaWhatsapp />
+          </Link>
           <Link to="http://instagram.com/weddingsbyanuj/" target="_blank">
             <FaInstagram />
           </Link>
-          <p>
-            <FaTwitter />
-          </p>
-          <p>
-            <FaLinkedin />
-          </p>
-          <p>
+          <Link to="https://youtube.com/@weddingsbyanuj" target="_blank">
             <FaYoutube />
-          </p>
-          <p>
+          </Link>
+          <Link to="mailto:eventaxiom7@gmail.com" target="_blank">
             <FaGoogle />
-          </p>
+          </Link>
         </div>
       </div>
     </div>

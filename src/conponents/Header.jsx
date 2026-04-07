@@ -24,12 +24,12 @@ export default function Header() {
             Home
           </NavLink>
           <NavLink
-            to="/events"
+            to="/gallery"
             className={({ isActive }) =>
               isActive ? "text-teal-600" : "text-gray-600 hover:text-teal-600"
             }
           >
-            Events
+            Gallery
           </NavLink>
           <NavLink
             to="/about"
@@ -49,7 +49,7 @@ export default function Header() {
           </NavLink>
           <button
             onClick={() => setOpen(true)}
-            className="linear-gradient bg-linear-to-r from-teal-600 to-teal-600 p-2 rounded hover:shadow-sm hover:shadow-purple-900 text-sm text-white"
+            className="linear-gradient bg-linear-to-r from-purple-200 to-pink-200 p-2 rounded hover:shadow-sm hover:shadow-purple-900 text-sm text-black"
           >
             Schedule Now
           </button>
@@ -71,8 +71,8 @@ export default function Header() {
           <NavLink to="/" onClick={() => setMenuOpen(false)}>
             Home
           </NavLink>
-          <NavLink to="/events" onClick={() => setMenuOpen(false)}>
-            Events
+          <NavLink to="/gallery" onClick={() => setMenuOpen(false)}>
+            Gallery
           </NavLink>
           <NavLink to="/about" onClick={() => setMenuOpen(false)}>
             About
