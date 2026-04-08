@@ -27,10 +27,10 @@ export default function WhyChooseUs() {
       className="bg-purple-50 text-center mask-[linear-gradient(to_bottom,transparent_0%,black_10%)] 
         drop-shadow-[0_10px_20px_rgba(0,0,0,0.4)] py-10 space-y-5 justify-center items-center flex flex-col"
     >
-      <p data-aos="fade-left" className="text-4xl font-semibold ">
+      <p data-aos="fade-left" className="text-3xl font-semibold ">
         Why Choose Event Axiom ?
       </p>
-      <div className="py-6">
+      <div className="py-6 px-3">
         <div className="flex flex-col gap-6 w-full">
           {reviews.map((review) => (
             <div

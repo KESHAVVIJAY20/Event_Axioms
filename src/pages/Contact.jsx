@@ -52,7 +52,7 @@ export default function Contact() {
   };
 
   return (
-    <>
+    <div className="overflow-hidden ">
       <Header />
       <div className="relative min-h-screen bg-linear-to-r from-pink-300 via-pink-200 to-white py-24 px-6">
         {/* Heading */}
@@ -63,7 +63,7 @@ export default function Contact() {
           Let’s Plan Your Perfect Event
         </h1>
         <p
-          className="text-center text-black mb-16 max-w-xl mx-auto"
+          className="text-center text-black mb-16 max-w-2xl mx-auto"
           data-aos="fade-up"
         >
           Whether it's a wedding, corporate event, or birthday bash, we bring
@@ -177,6 +177,6 @@ export default function Contact() {
         </div>
       </div>{" "}
       <Footer />
-    </>
+    </div>
   );
 }

@@ -8,6 +8,8 @@ import SplashScreen from "./conponents/WelcomeModal";
 import ScrollToTop from "./conponents/ScrollToTop";
 import { FaWhatsapp } from "react-icons/fa";
 import Gallery from "./pages/Gallery";
+import NotFound from "./pages/NotFound";
+import GalleryDetails from "./pages/GalleryDetail";
 function App() {
   const [showSplash, setShowSplash] = useState(true);
 
@@ -31,6 +33,8 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<About />} />
             <Route path="/gallery" element={<Gallery />} />
+            <Route path="/gallery/:id" element={<GalleryDetails />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </HashRouter>
       )}

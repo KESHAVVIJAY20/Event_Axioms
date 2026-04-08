@@ -26,7 +26,7 @@ export default function ClientReview() {
       className="bg-orange-50 text-center mask-[linear-gradient(to_bottom,transparent_0%,black_10%)] 
         drop-shadow-[0_10px_20px_rgba(0,0,0,0.4)] py-10 space-y-5 justify-center items-center flex flex-col"
     >
-      <p data-aos="fade-left" className="text-4xl font-semibold ">What Clients Say</p>
+      <p data-aos="fade-left" className="text-4xl font-semibold ">What Clients Says ?</p>
       {/* <p>Our clients love us! Read what they have to say about our services.</p> */}
       <span data-aos="fade-right" className="text-lg italic w-3/4">
         "Event Axiom made our wedding absolutely magical. Every detail was

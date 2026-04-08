@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import LOGO from "../assets/Ea.png";
 import { HiMenu, HiX } from "react-icons/hi";
-import EnquiryModal from "./EnquiryModal";
 export default function Header() {
-  const [open, setOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <header className="sticky top-0 z-10000 bg-white shadow-md md:p-0 p-5">
@@ -41,19 +39,10 @@ export default function Header() {
           </NavLink>
           <NavLink
             to="/contact"
-            className={({ isActive }) =>
-              isActive ? "text-teal-600" : "text-gray-600 hover:text-teal-600"
-            }
+            className="className= bg-linear-to-r from-purple-300 to-pink-300 p-2 rounded hover:border hover:border-red-500 hover:shadow-sm hover:shadow-purple-900 text-sm text-black"
           >
             Contact Us
           </NavLink>
-          <button
-            onClick={() => setOpen(true)}
-            className="linear-gradient bg-linear-to-r from-purple-200 to-pink-200 p-2 rounded hover:shadow-sm hover:shadow-purple-900 text-sm text-black"
-          >
-            Schedule Now
-          </button>
-          <EnquiryModal isOpen={open} onClose={() => setOpen(false)} />
         </nav>
         <button
           onClick={() => setMenuOpen(!menuOpen)}
@@ -62,29 +51,50 @@ export default function Header() {
           {menuOpen ? <HiX /> : <HiMenu />}
         </button>
       </div>
+      {/* Mobile Drawer */}
       <div
-        className={`md:hidden bg-white overflow-hidden transition-all duration-300 ${
-          menuOpen ? "max-h-96 py-4" : "max-h-0"
+        className={`fixed inset-0 z-50 transition-opacity duration-300 ${
+          menuOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
       >
-        <nav className="flex flex-col items-center gap-6 text-lg font-semibold">
-          <NavLink to="/" onClick={() => setMenuOpen(false)}>
-            Home
-          </NavLink>
-          <NavLink to="/gallery" onClick={() => setMenuOpen(false)}>
-            Gallery
-          </NavLink>
-          <NavLink to="/about" onClick={() => setMenuOpen(false)}>
-            About
-          </NavLink>
-          <NavLink to="/contact" onClick={() => setMenuOpen(false)}>
-            Contact us
-          </NavLink>
-          <button onClick={() => setOpen(true)} className="linear-gradient bg-linear-to-r from-teal-600 to-teal-600 p-2 rounded hover:shadow-sm hover:shadow-purple-900 text-sm text-white">
-            Schedule Now
-          </button>
-          <EnquiryModal isOpen={open} onClose={() => setOpen(false)} />
-        </nav>
+        {/* Overlay */}
+        <div
+          className="absolute inset-0 bg-black/50"
+          onClick={() => setMenuOpen(false)}
+        ></div>
+
+        {/* Drawer */}
+        <div
+          className={`absolute top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ${
+            menuOpen ? "translate-x-0" : "-translate-x-full"
+          }`}
+        >
+          <div className="flex justify-between items-center p-5 border-b">
+            <img src={LOGO} width={120} alt="logo" />
+            <button onClick={() => setMenuOpen(false)} className="text-2xl">
+              <HiX />
+            </button>
+          </div>
+
+          <nav className="flex flex-col gap-6 p-6 text-lg font-semibold">
+            <NavLink to="/" onClick={() => setMenuOpen(false)}>
+              Home
+            </NavLink>
+            <NavLink to="/gallery" onClick={() => setMenuOpen(false)}>
+              Gallery
+            </NavLink>
+            <NavLink to="/about" onClick={() => setMenuOpen(false)}>
+              About
+            </NavLink>
+            <NavLink
+              to="/contact"
+              onClick={() => setMenuOpen(false)}
+              className="bg-linear-to-r from-purple-400 to-pink-400 text-white p-2 rounded text-center"
+            >
+              Contact Us
+            </NavLink>
+          </nav>
+        </div>
       </div>
     </header>
   );
